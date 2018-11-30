@@ -1,0 +1,8 @@
+main = do cs <- getContents
+          putStr $ takeNLines 10 m cs
+
+takeNLines n m cs = unlines ( takeLast n ( lines cs ) )
+
+takeLast n m ss = reverse ( take n (reverse ss) )
+
+countHead cs = length ( lines cs )
